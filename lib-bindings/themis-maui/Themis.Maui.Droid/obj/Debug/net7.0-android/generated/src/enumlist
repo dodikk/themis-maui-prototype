@@ -1,0 +1,4 @@
+com.cossacklabs.themis.SecureCompare$CompareResult:Com.Cossacklabs.Themis:SecureCompare.CompareResult
+com.cossacklabs.themis.SecureCompare$ProtocolResult:Com.Cossacklabs.Themis:SecureCompare.ProtocolResult
+com.cossacklabs.themis.SecureSession$SessionDataType:Com.Cossacklabs.Themis:SecureSession.SessionDataType
+com.cossacklabs.themis.SecureSession$State:Com.Cossacklabs.Themis:SecureSession.State

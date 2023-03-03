@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21;ANDROID_22;ANDROID_23;ANDROID_24;ANDROID_25;ANDROID_26;ANDROID_27;ANDROID_28;ANDROID_29;ANDROID_30;ANDROID_31;ANDROID_32;ANDROID_33</DefineConstants>
+  </PropertyGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.AsymmetricKey.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.BuildConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.IKey.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.InvalidArgumentException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.ISessionCallbacks.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.ITransportSessionCallbacks.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.KeyGenerationException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.Keypair.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.KeypairGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.NullArgumentException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.PrivateKey.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.PublicKey.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.SecureCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.SecureCellData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.SecureCellException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.SecureCompare.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.SecureCompareException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.SecureMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.SecureMessageWrapException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.SecureServerSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.SecureSession.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.SecureSessionException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.SecureSocket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.SecureTransportSession.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Cossacklabs.Themis.SymmetricKey.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)__NamespaceMapping__.cs" />
+  </ItemGroup>
+  <!-- Enums -->
+  <ItemGroup />
+</Project>

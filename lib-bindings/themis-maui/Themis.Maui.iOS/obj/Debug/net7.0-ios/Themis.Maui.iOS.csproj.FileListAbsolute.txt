@@ -1,0 +1,13 @@
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/Themis.Maui.iOS/bin/Debug/net7.0-ios/Themis.Maui.iOS.dll
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/Themis.Maui.iOS/bin/Debug/net7.0-ios/Themis.Maui.iOS.pdb
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/Themis.Maui.iOS/obj/Debug/net7.0-ios/_ProcessedBundleResourcesPath.items
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/Themis.Maui.iOS/obj/Debug/net7.0-ios/_ProcessedContentPath.items
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/Themis.Maui.iOS/obj/Debug/net7.0-ios/Themis.Maui.iOS.csproj.AssemblyReference.cache
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/Themis.Maui.iOS/obj/Debug/net7.0-ios/Themis.Maui.iOS.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/Themis.Maui.iOS/obj/Debug/net7.0-ios/Themis.Maui.iOS.AssemblyInfoInputs.cache
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/Themis.Maui.iOS/obj/Debug/net7.0-ios/Themis.Maui.iOS.AssemblyInfo.cs
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/Themis.Maui.iOS/obj/Debug/net7.0-ios/Themis.Maui.iOS.csproj.CoreCompileInputs.cache
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/Themis.Maui.iOS/obj/Debug/net7.0-ios/Themis.Maui.iOS.dll
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/Themis.Maui.iOS/obj/Debug/net7.0-ios/refint/Themis.Maui.iOS.dll
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/Themis.Maui.iOS/obj/Debug/net7.0-ios/Themis.Maui.iOS.pdb
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/Themis.Maui.iOS/obj/Debug/net7.0-ios/ref/Themis.Maui.iOS.dll

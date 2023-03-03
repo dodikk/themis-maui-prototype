@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<api api-source="JavaTypeSystem">
+  <package name="com.cossacklabs.themis" jni-name="com/cossacklabs/themis">
+    <class abstract="true" deprecated="not deprecated" extends="com.cossacklabs.themis.KeyBytes" extends-generic-aware="com.cossacklabs.themis.KeyBytes" jni-extends="Lcom/cossacklabs/themis/KeyBytes;" final="false" name="AsymmetricKey" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/AsymmetricKey;">
+      <constructor deprecated="not deprecated" final="false" name="AsymmetricKey" jni-signature="([B)V" bridge="false" static="false" type="com.cossacklabs.themis.AsymmetricKey" synthetic="false" visibility="public">
+        <parameter name="key" type="byte[]" jni-type="[B" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="toByteArray" jni-signature="()[B" bridge="true" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="true" visibility="public" />
+      <field deprecated="not deprecated" final="true" name="KEYTYPE_EC" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="KEYTYPE_RSA" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="true" name="BuildConfig" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/BuildConfig;">
+      <constructor deprecated="not deprecated" final="false" name="BuildConfig" jni-signature="()V" bridge="false" static="false" type="com.cossacklabs.themis.BuildConfig" synthetic="false" visibility="public" />
+      <field deprecated="not deprecated" final="true" name="APPLICATION_ID" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;com.cossacklabs.themis&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="BUILD_TYPE" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;release&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEBUG" jni-signature="Z" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="FLAVOR" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="VERSION_CODE" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="VERSION_NAME" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;0.14.0&quot;" visibility="public" volatile="false" />
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="IKey" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/IKey;">
+      <method abstract="true" deprecated="not deprecated" final="false" name="toByteArray" jni-signature="()[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" />
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.IllegalArgumentException" extends-generic-aware="java.lang.IllegalArgumentException" jni-extends="Ljava/lang/IllegalArgumentException;" final="false" name="InvalidArgumentException" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/InvalidArgumentException;">
+      <constructor deprecated="not deprecated" final="false" name="InvalidArgumentException" jni-signature="(Ljava/lang/String;)V" bridge="false" static="false" type="com.cossacklabs.themis.InvalidArgumentException" synthetic="false" visibility="public">
+        <parameter name="message" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </constructor>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ISessionCallbacks" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/ISessionCallbacks;">
+      <method abstract="true" deprecated="not deprecated" final="false" name="getPublicKeyForId" jni-signature="(Lcom/cossacklabs/themis/SecureSession;[B)Lcom/cossacklabs/themis/PublicKey;" bridge="false" native="false" return="com.cossacklabs.themis.PublicKey" jni-return="Lcom/cossacklabs/themis/PublicKey;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="com.cossacklabs.themis.SecureSession" jni-type="Lcom/cossacklabs/themis/SecureSession;" />
+        <parameter name="p1" type="byte[]" jni-type="[B" />
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="stateChanged" jni-signature="(Lcom/cossacklabs/themis/SecureSession;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="com.cossacklabs.themis.SecureSession" jni-type="Lcom/cossacklabs/themis/SecureSession;" />
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ITransportSessionCallbacks" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/ITransportSessionCallbacks;">
+      <implements name="com.cossacklabs.themis.ISessionCallbacks" name-generic-aware="com.cossacklabs.themis.ISessionCallbacks" jni-type="Lcom/cossacklabs/themis/ISessionCallbacks;" />
+      <method abstract="true" deprecated="not deprecated" final="false" name="read" jni-signature="()[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="true" deprecated="not deprecated" final="false" name="write" jni-signature="([B)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="byte[]" jni-type="[B" />
+      </method>
+    </interface>
+    <class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="KeyBytes" static="false" visibility="" jni-signature="Lcom/cossacklabs/themis/KeyBytes;">
+      <implements name="com.cossacklabs.themis.IKey" name-generic-aware="com.cossacklabs.themis.IKey" jni-type="Lcom/cossacklabs/themis/IKey;" />
+      <constructor deprecated="not deprecated" final="false" name="KeyBytes" jni-signature="([B)V" bridge="false" static="false" type="com.cossacklabs.themis.KeyBytes" synthetic="false" visibility="public">
+        <parameter name="key" type="byte[]" jni-type="[B" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="toByteArray" jni-signature="()[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.RuntimeException" extends-generic-aware="java.lang.RuntimeException" jni-extends="Ljava/lang/RuntimeException;" final="false" name="KeyGenerationException" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/KeyGenerationException;" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="Keypair" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/Keypair;">
+      <constructor deprecated="not deprecated" final="false" name="Keypair" jni-signature="(Lcom/cossacklabs/themis/PrivateKey;Lcom/cossacklabs/themis/PublicKey;)V" bridge="false" static="false" type="com.cossacklabs.themis.Keypair" synthetic="false" visibility="public">
+        <parameter name="privateKey" type="com.cossacklabs.themis.PrivateKey" jni-type="Lcom/cossacklabs/themis/PrivateKey;" />
+        <parameter name="publicKey" type="com.cossacklabs.themis.PublicKey" jni-type="Lcom/cossacklabs/themis/PublicKey;" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPrivateKey" jni-signature="()Lcom/cossacklabs/themis/PrivateKey;" bridge="false" native="false" return="com.cossacklabs.themis.PrivateKey" jni-return="Lcom/cossacklabs/themis/PrivateKey;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPublicKey" jni-signature="()Lcom/cossacklabs/themis/PublicKey;" bridge="false" native="false" return="com.cossacklabs.themis.PublicKey" jni-return="Lcom/cossacklabs/themis/PublicKey;" static="false" synchronized="false" synthetic="false" visibility="public" />
+    </class>
+    <class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="KeypairGenerator" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/KeypairGenerator;">
+      <method abstract="false" deprecated="not deprecated" final="false" name="generateKeypair" jni-signature="()Lcom/cossacklabs/themis/Keypair;" bridge="false" native="false" return="com.cossacklabs.themis.Keypair" jni-return="Lcom/cossacklabs/themis/Keypair;" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="generateKeypair" jni-signature="(I)Lcom/cossacklabs/themis/Keypair;" bridge="false" native="false" return="com.cossacklabs.themis.Keypair" jni-return="Lcom/cossacklabs/themis/Keypair;" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="keyType" type="int" jni-type="I" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.NullPointerException" extends-generic-aware="java.lang.NullPointerException" jni-extends="Ljava/lang/NullPointerException;" final="false" name="NullArgumentException" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/NullArgumentException;">
+      <constructor deprecated="not deprecated" final="false" name="NullArgumentException" jni-signature="()V" bridge="false" static="false" type="com.cossacklabs.themis.NullArgumentException" synthetic="false" visibility="public" />
+      <constructor deprecated="not deprecated" final="false" name="NullArgumentException" jni-signature="(Ljava/lang/String;)V" bridge="false" static="false" type="com.cossacklabs.themis.NullArgumentException" synthetic="false" visibility="public">
+        <parameter name="message" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.cossacklabs.themis.KeyBytes" extends-generic-aware="com.cossacklabs.themis.KeyBytes" jni-extends="Lcom/cossacklabs/themis/KeyBytes;" final="false" name="PassphraseBytes" static="false" visibility="" jni-signature="Lcom/cossacklabs/themis/PassphraseBytes;" />
+    <class abstract="false" deprecated="not deprecated" extends="com.cossacklabs.themis.AsymmetricKey" extends-generic-aware="com.cossacklabs.themis.AsymmetricKey" jni-extends="Lcom/cossacklabs/themis/AsymmetricKey;" final="false" name="PrivateKey" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/PrivateKey;">
+      <constructor deprecated="not deprecated" final="false" name="PrivateKey" jni-signature="([B)V" bridge="false" static="false" type="com.cossacklabs.themis.PrivateKey" synthetic="false" visibility="public">
+        <parameter name="key" type="byte[]" jni-type="[B" />
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.cossacklabs.themis.AsymmetricKey" extends-generic-aware="com.cossacklabs.themis.AsymmetricKey" jni-extends="Lcom/cossacklabs/themis/AsymmetricKey;" final="false" name="PublicKey" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/PublicKey;">
+      <constructor deprecated="not deprecated" final="false" name="PublicKey" jni-signature="([B)V" bridge="false" static="false" type="com.cossacklabs.themis.PublicKey" synthetic="false" visibility="public">
+        <parameter name="key" type="byte[]" jni-type="[B" />
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="SecureCell" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureCell;">
+      <constructor deprecated="deprecated" final="false" name="SecureCell" jni-signature="([B)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureCell" synthetic="false" visibility="public">
+        <parameter name="key" type="byte[]" jni-type="[B" />
+      </constructor>
+      <constructor deprecated="deprecated" final="false" name="SecureCell" jni-signature="([BI)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureCell" synthetic="false" visibility="public">
+        <parameter name="key" type="byte[]" jni-type="[B" />
+        <parameter name="mode" type="int" jni-type="I" />
+      </constructor>
+      <constructor deprecated="deprecated" final="false" name="SecureCell" jni-signature="(I)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureCell" synthetic="false" visibility="public">
+        <parameter name="mode" type="int" jni-type="I" />
+      </constructor>
+      <constructor deprecated="deprecated" final="false" name="SecureCell" jni-signature="(Ljava/lang/String;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureCell" synthetic="false" visibility="public">
+        <parameter name="password" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </constructor>
+      <constructor deprecated="deprecated" final="false" name="SecureCell" jni-signature="(Ljava/lang/String;I)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureCell" synthetic="false" visibility="public">
+        <parameter name="password" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="mode" type="int" jni-type="I" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="ContextImprintWithKey" jni-signature="([B)Lcom/cossacklabs/themis/SecureCell$ContextImprint;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCell.ContextImprint" jni-return="Lcom/cossacklabs/themis/SecureCell$ContextImprint;" static="true" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="key" type="byte[]" jni-type="[B" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="ContextImprintWithKey" jni-signature="(Lcom/cossacklabs/themis/SymmetricKey;)Lcom/cossacklabs/themis/SecureCell$ContextImprint;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCell.ContextImprint" jni-return="Lcom/cossacklabs/themis/SecureCell$ContextImprint;" static="true" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="key" type="com.cossacklabs.themis.SymmetricKey" jni-type="Lcom/cossacklabs/themis/SymmetricKey;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="SealWithKey" jni-signature="([B)Lcom/cossacklabs/themis/SecureCell$Seal;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCell.Seal" jni-return="Lcom/cossacklabs/themis/SecureCell$Seal;" static="true" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="key" type="byte[]" jni-type="[B" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="SealWithKey" jni-signature="(Lcom/cossacklabs/themis/SymmetricKey;)Lcom/cossacklabs/themis/SecureCell$Seal;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCell.Seal" jni-return="Lcom/cossacklabs/themis/SecureCell$Seal;" static="true" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="key" type="com.cossacklabs.themis.SymmetricKey" jni-type="Lcom/cossacklabs/themis/SymmetricKey;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="SealWithPassphrase" jni-signature="([B)Lcom/cossacklabs/themis/SecureCell$Seal;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCell.Seal" jni-return="Lcom/cossacklabs/themis/SecureCell$Seal;" static="true" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="encodedPassphrase" type="byte[]" jni-type="[B" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="SealWithPassphrase" jni-signature="(Ljava/lang/String;)Lcom/cossacklabs/themis/SecureCell$Seal;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCell.Seal" jni-return="Lcom/cossacklabs/themis/SecureCell$Seal;" static="true" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="passphrase" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="SealWithPassphrase" jni-signature="(Ljava/lang/String;Ljava/nio/charset/Charset;)Lcom/cossacklabs/themis/SecureCell$Seal;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCell.Seal" jni-return="Lcom/cossacklabs/themis/SecureCell$Seal;" static="true" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="passphrase" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="charset" type="java.nio.charset.Charset" jni-type="Ljava/nio/charset/Charset;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="TokenProtectWithKey" jni-signature="([B)Lcom/cossacklabs/themis/SecureCell$TokenProtect;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCell.TokenProtect" jni-return="Lcom/cossacklabs/themis/SecureCell$TokenProtect;" static="true" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="key" type="byte[]" jni-type="[B" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="TokenProtectWithKey" jni-signature="(Lcom/cossacklabs/themis/SymmetricKey;)Lcom/cossacklabs/themis/SecureCell$TokenProtect;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCell.TokenProtect" jni-return="Lcom/cossacklabs/themis/SecureCell$TokenProtect;" static="true" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="key" type="com.cossacklabs.themis.SymmetricKey" jni-type="Lcom/cossacklabs/themis/SymmetricKey;" />
+      </method>
+      <method abstract="false" deprecated="deprecated" final="false" name="protect" jni-signature="([B[B)Lcom/cossacklabs/themis/SecureCellData;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCellData" jni-return="Lcom/cossacklabs/themis/SecureCellData;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="byte[]" jni-type="[B" />
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="false" deprecated="deprecated" final="false" name="protect" jni-signature="([B[B[B)Lcom/cossacklabs/themis/SecureCellData;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCellData" jni-return="Lcom/cossacklabs/themis/SecureCellData;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="key" type="byte[]" jni-type="[B" />
+        <parameter name="context" type="byte[]" jni-type="[B" />
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="false" deprecated="deprecated" final="false" name="protect" jni-signature="(Ljava/lang/String;[B)Lcom/cossacklabs/themis/SecureCellData;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCellData" jni-return="Lcom/cossacklabs/themis/SecureCellData;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="false" deprecated="deprecated" final="false" name="protect" jni-signature="(Ljava/lang/String;Ljava/lang/String;[B)Lcom/cossacklabs/themis/SecureCellData;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCellData" jni-return="Lcom/cossacklabs/themis/SecureCellData;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="password" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="context" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="false" deprecated="deprecated" final="false" name="unprotect" jni-signature="([B[BLcom/cossacklabs/themis/SecureCellData;)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="key" type="byte[]" jni-type="[B" />
+        <parameter name="context" type="byte[]" jni-type="[B" />
+        <parameter name="protectedData" type="com.cossacklabs.themis.SecureCellData" jni-type="Lcom/cossacklabs/themis/SecureCellData;" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="false" deprecated="deprecated" final="false" name="unprotect" jni-signature="([BLcom/cossacklabs/themis/SecureCellData;)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="byte[]" jni-type="[B" />
+        <parameter name="protectedData" type="com.cossacklabs.themis.SecureCellData" jni-type="Lcom/cossacklabs/themis/SecureCellData;" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="false" deprecated="deprecated" final="false" name="unprotect" jni-signature="(Ljava/lang/String;Lcom/cossacklabs/themis/SecureCellData;)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="protectedData" type="com.cossacklabs.themis.SecureCellData" jni-type="Lcom/cossacklabs/themis/SecureCellData;" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="false" deprecated="deprecated" final="false" name="unprotect" jni-signature="(Ljava/lang/String;Ljava/lang/String;Lcom/cossacklabs/themis/SecureCellData;)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="password" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="context" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="protectedData" type="com.cossacklabs.themis.SecureCellData" jni-type="Lcom/cossacklabs/themis/SecureCellData;" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <field deprecated="deprecated" final="true" name="MODE_CONTEXT_IMPRINT" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false" />
+      <field deprecated="deprecated" final="true" name="MODE_SEAL" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false" />
+      <field deprecated="deprecated" final="true" name="MODE_TOKEN_PROTECT" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false" />
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="SecureCell.ContextImprint" static="true" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureCell$ContextImprint;">
+      <method abstract="true" deprecated="not deprecated" final="false" name="decrypt" jni-signature="([B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="p0" type="byte[]" jni-type="[B" />
+        <parameter name="p1" type="byte[]" jni-type="[B" />
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="encrypt" jni-signature="([B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="p0" type="byte[]" jni-type="[B" />
+        <parameter name="p1" type="byte[]" jni-type="[B" />
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="SecureCell.Seal" static="true" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureCell$Seal;">
+      <method abstract="true" deprecated="not deprecated" final="false" name="decrypt" jni-signature="([B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="p0" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="decrypt" jni-signature="([B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="p0" type="byte[]" jni-type="[B" />
+        <parameter name="p1" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="encrypt" jni-signature="([B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="p0" type="byte[]" jni-type="[B" />
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="encrypt" jni-signature="([B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="p0" type="byte[]" jni-type="[B" />
+        <parameter name="p1" type="byte[]" jni-type="[B" />
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="SecureCell.TokenProtect" static="true" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureCell$TokenProtect;">
+      <method abstract="true" deprecated="not deprecated" final="false" name="decrypt" jni-signature="([B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="p0" type="byte[]" jni-type="[B" />
+        <parameter name="p1" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="decrypt" jni-signature="([B[B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="p0" type="byte[]" jni-type="[B" />
+        <parameter name="p1" type="byte[]" jni-type="[B" />
+        <parameter name="p2" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="encrypt" jni-signature="([B)Lcom/cossacklabs/themis/SecureCellData;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCellData" jni-return="Lcom/cossacklabs/themis/SecureCellData;" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="p0" type="byte[]" jni-type="[B" />
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="encrypt" jni-signature="([B[B)Lcom/cossacklabs/themis/SecureCellData;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCellData" jni-return="Lcom/cossacklabs/themis/SecureCellData;" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="p0" type="byte[]" jni-type="[B" />
+        <parameter name="p1" type="byte[]" jni-type="[B" />
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="SecureCellContextImprint" static="false" visibility="" jni-signature="Lcom/cossacklabs/themis/SecureCellContextImprint;">
+      <implements name="com.cossacklabs.themis.SecureCell.ContextImprint" name-generic-aware="com.cossacklabs.themis.SecureCell.ContextImprint" jni-type="Lcom/cossacklabs/themis/SecureCell$ContextImprint;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="decrypt" jni-signature="([B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <parameter name="context" type="byte[]" jni-type="[B" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encrypt" jni-signature="([B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <parameter name="context" type="byte[]" jni-type="[B" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="SecureCellData" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureCellData;">
+      <constructor deprecated="not deprecated" final="false" name="SecureCellData" jni-signature="([B[B)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureCellData" synthetic="false" visibility="public">
+        <parameter name="protectedData" type="byte[]" jni-type="[B" />
+        <parameter name="additionalData" type="byte[]" jni-type="[B" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="component1" jni-signature="()[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="component2" jni-signature="()[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAdditionalData" jni-signature="()[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getProtectedData" jni-signature="()[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasAdditionalData" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" jni-extends="Ljava/lang/Exception;" final="false" name="SecureCellException" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureCellException;">
+      <constructor deprecated="not deprecated" final="false" name="SecureCellException" jni-signature="()V" bridge="false" static="false" type="com.cossacklabs.themis.SecureCellException" synthetic="false" visibility="public" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="SecureCellSeal" static="false" visibility="" jni-signature="Lcom/cossacklabs/themis/SecureCellSeal;">
+      <implements name="com.cossacklabs.themis.SecureCell.Seal" name-generic-aware="com.cossacklabs.themis.SecureCell.Seal" jni-type="Lcom/cossacklabs/themis/SecureCell$Seal;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="decrypt" jni-signature="([B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="decrypt" jni-signature="([B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <parameter name="context" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encrypt" jni-signature="([B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encrypt" jni-signature="([B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <parameter name="context" type="byte[]" jni-type="[B" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="SecureCellSealWithPassphrase" static="false" visibility="" jni-signature="Lcom/cossacklabs/themis/SecureCellSealWithPassphrase;">
+      <implements name="com.cossacklabs.themis.SecureCell.Seal" name-generic-aware="com.cossacklabs.themis.SecureCell.Seal" jni-type="Lcom/cossacklabs/themis/SecureCell$Seal;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="decrypt" jni-signature="([B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="decrypt" jni-signature="([B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <parameter name="context" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encrypt" jni-signature="([B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encrypt" jni-signature="([B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <parameter name="context" type="byte[]" jni-type="[B" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="SecureCellTokenProtect" static="false" visibility="" jni-signature="Lcom/cossacklabs/themis/SecureCellTokenProtect;">
+      <implements name="com.cossacklabs.themis.SecureCell.TokenProtect" name-generic-aware="com.cossacklabs.themis.SecureCell.TokenProtect" jni-type="Lcom/cossacklabs/themis/SecureCell$TokenProtect;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="decrypt" jni-signature="([B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <parameter name="token" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="decrypt" jni-signature="([B[B[B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <parameter name="token" type="byte[]" jni-type="[B" />
+        <parameter name="context" type="byte[]" jni-type="[B" />
+        <exception name="SecureCellException" type="com.cossacklabs.themis.SecureCellException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encrypt" jni-signature="([B)Lcom/cossacklabs/themis/SecureCellData;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCellData" jni-return="Lcom/cossacklabs/themis/SecureCellData;" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encrypt" jni-signature="([B[B)Lcom/cossacklabs/themis/SecureCellData;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCellData" jni-return="Lcom/cossacklabs/themis/SecureCellData;" static="false" synchronized="false" synthetic="false" visibility="public" return-not-null="true">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <parameter name="context" type="byte[]" jni-type="[B" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="SecureCompare" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureCompare;">
+      <constructor deprecated="not deprecated" final="false" name="SecureCompare" jni-signature="()V" bridge="false" static="false" type="com.cossacklabs.themis.SecureCompare" synthetic="false" visibility="public" />
+      <constructor deprecated="not deprecated" final="false" name="SecureCompare" jni-signature="([B)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureCompare" synthetic="false" visibility="public">
+        <parameter name="secret" type="byte[]" jni-type="[B" />
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="SecureCompare" jni-signature="(Ljava/lang/String;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureCompare" synthetic="false" visibility="public">
+        <parameter name="password" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="appendSecret" jni-signature="([B)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="secretData" type="byte[]" jni-type="[B" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="begin" jni-signature="()[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="close" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getResult" jni-signature="()Lcom/cossacklabs/themis/SecureCompare$CompareResult;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCompare.CompareResult" jni-return="Lcom/cossacklabs/themis/SecureCompare$CompareResult;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="proceed" jni-signature="([B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="compareData" type="byte[]" jni-type="[B" />
+        <exception name="SecureCompareException" type="com.cossacklabs.themis.SecureCompareException" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.cossacklabs.themis.SecureCompare.CompareResult&gt;" jni-extends="Ljava/lang/Enum;" final="true" name="SecureCompare.CompareResult" static="true" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureCompare$CompareResult;">
+      <method abstract="false" deprecated="not deprecated" final="false" name="valueOf" jni-signature="(Ljava/lang/String;)Lcom/cossacklabs/themis/SecureCompare$CompareResult;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCompare.CompareResult" jni-return="Lcom/cossacklabs/themis/SecureCompare$CompareResult;" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="name" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="values" jni-signature="()[Lcom/cossacklabs/themis/SecureCompare$CompareResult;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCompare.CompareResult[]" jni-return="[Lcom/cossacklabs/themis/SecureCompare$CompareResult;" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <field deprecated="not deprecated" final="true" name="MATCH" jni-signature="Lcom/cossacklabs/themis/SecureCompare$CompareResult;" static="true" transient="false" type="com.cossacklabs.themis.SecureCompare.CompareResult" type-generic-aware="com.cossacklabs.themis.SecureCompare.CompareResult" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="NOT_READY" jni-signature="Lcom/cossacklabs/themis/SecureCompare$CompareResult;" static="true" transient="false" type="com.cossacklabs.themis.SecureCompare.CompareResult" type-generic-aware="com.cossacklabs.themis.SecureCompare.CompareResult" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="NO_MATCH" jni-signature="Lcom/cossacklabs/themis/SecureCompare$CompareResult;" static="true" transient="false" type="com.cossacklabs.themis.SecureCompare.CompareResult" type-generic-aware="com.cossacklabs.themis.SecureCompare.CompareResult" visibility="public" volatile="false" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.cossacklabs.themis.SecureCompare.ProtocolResult&gt;" jni-extends="Ljava/lang/Enum;" final="true" name="SecureCompare.ProtocolResult" static="true" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureCompare$ProtocolResult;">
+      <method abstract="false" deprecated="not deprecated" final="false" name="valueOf" jni-signature="(Ljava/lang/String;)Lcom/cossacklabs/themis/SecureCompare$ProtocolResult;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCompare.ProtocolResult" jni-return="Lcom/cossacklabs/themis/SecureCompare$ProtocolResult;" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="name" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="values" jni-signature="()[Lcom/cossacklabs/themis/SecureCompare$ProtocolResult;" bridge="false" native="false" return="com.cossacklabs.themis.SecureCompare.ProtocolResult[]" jni-return="[Lcom/cossacklabs/themis/SecureCompare$ProtocolResult;" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <field deprecated="not deprecated" final="true" name="NO_OUTPUT" jni-signature="Lcom/cossacklabs/themis/SecureCompare$ProtocolResult;" static="true" transient="false" type="com.cossacklabs.themis.SecureCompare.ProtocolResult" type-generic-aware="com.cossacklabs.themis.SecureCompare.ProtocolResult" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="SEND_TO_PEER" jni-signature="Lcom/cossacklabs/themis/SecureCompare$ProtocolResult;" static="true" transient="false" type="com.cossacklabs.themis.SecureCompare.ProtocolResult" type-generic-aware="com.cossacklabs.themis.SecureCompare.ProtocolResult" visibility="public" volatile="false" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" jni-extends="Ljava/lang/Exception;" final="false" name="SecureCompareException" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureCompareException;">
+      <constructor deprecated="not deprecated" final="false" name="SecureCompareException" jni-signature="()V" bridge="false" static="false" type="com.cossacklabs.themis.SecureCompareException" synthetic="false" visibility="public" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="SecureMessage" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureMessage;">
+      <constructor deprecated="not deprecated" final="false" name="SecureMessage" jni-signature="(Lcom/cossacklabs/themis/PrivateKey;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureMessage" synthetic="false" visibility="public">
+        <parameter name="privateKey" type="com.cossacklabs.themis.PrivateKey" jni-type="Lcom/cossacklabs/themis/PrivateKey;" />
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="SecureMessage" jni-signature="(Lcom/cossacklabs/themis/PrivateKey;Lcom/cossacklabs/themis/PublicKey;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureMessage" synthetic="false" visibility="public">
+        <parameter name="privateKey" type="com.cossacklabs.themis.PrivateKey" jni-type="Lcom/cossacklabs/themis/PrivateKey;" />
+        <parameter name="peerPublicKey" type="com.cossacklabs.themis.PublicKey" jni-type="Lcom/cossacklabs/themis/PublicKey;" />
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="SecureMessage" jni-signature="(Lcom/cossacklabs/themis/PublicKey;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureMessage" synthetic="false" visibility="public">
+        <parameter name="peerPublicKey" type="com.cossacklabs.themis.PublicKey" jni-type="Lcom/cossacklabs/themis/PublicKey;" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="sign" jni-signature="([B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="message" type="byte[]" jni-type="[B" />
+        <exception name="SecureMessageWrapException" type="com.cossacklabs.themis.SecureMessageWrapException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="unwrap" jni-signature="([B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="message" type="byte[]" jni-type="[B" />
+        <exception name="SecureMessageWrapException" type="com.cossacklabs.themis.SecureMessageWrapException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="unwrap" jni-signature="([BLcom/cossacklabs/themis/PublicKey;)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="message" type="byte[]" jni-type="[B" />
+        <parameter name="peerPublicKey" type="com.cossacklabs.themis.PublicKey" jni-type="Lcom/cossacklabs/themis/PublicKey;" />
+        <exception name="SecureMessageWrapException" type="com.cossacklabs.themis.SecureMessageWrapException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="verify" jni-signature="([B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="message" type="byte[]" jni-type="[B" />
+        <exception name="SecureMessageWrapException" type="com.cossacklabs.themis.SecureMessageWrapException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="verify" jni-signature="([BLcom/cossacklabs/themis/PublicKey;)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="message" type="byte[]" jni-type="[B" />
+        <parameter name="peerPublicKey" type="com.cossacklabs.themis.PublicKey" jni-type="Lcom/cossacklabs/themis/PublicKey;" />
+        <exception name="SecureMessageWrapException" type="com.cossacklabs.themis.SecureMessageWrapException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="wrap" jni-signature="([B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="message" type="byte[]" jni-type="[B" />
+        <exception name="SecureMessageWrapException" type="com.cossacklabs.themis.SecureMessageWrapException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="wrap" jni-signature="([BLcom/cossacklabs/themis/PublicKey;)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="message" type="byte[]" jni-type="[B" />
+        <parameter name="peerPublicKey" type="com.cossacklabs.themis.PublicKey" jni-type="Lcom/cossacklabs/themis/PublicKey;" />
+        <exception name="SecureMessageWrapException" type="com.cossacklabs.themis.SecureMessageWrapException" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" jni-extends="Ljava/lang/Exception;" final="false" name="SecureMessageWrapException" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureMessageWrapException;">
+      <constructor deprecated="not deprecated" final="false" name="SecureMessageWrapException" jni-signature="()V" bridge="false" static="false" type="com.cossacklabs.themis.SecureMessageWrapException" synthetic="false" visibility="public" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.net.ServerSocket" extends-generic-aware="java.net.ServerSocket" jni-extends="Ljava/net/ServerSocket;" final="false" name="SecureServerSocket" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureServerSocket;">
+      <constructor deprecated="not deprecated" final="false" name="SecureServerSocket" jni-signature="(I[BLcom/cossacklabs/themis/PrivateKey;Lcom/cossacklabs/themis/ISessionCallbacks;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureServerSocket" synthetic="false" visibility="public">
+        <parameter name="port" type="int" jni-type="I" />
+        <parameter name="id" type="byte[]" jni-type="[B" />
+        <parameter name="signPrivateKey" type="com.cossacklabs.themis.PrivateKey" jni-type="Lcom/cossacklabs/themis/PrivateKey;" />
+        <parameter name="callbacks" type="com.cossacklabs.themis.ISessionCallbacks" jni-type="Lcom/cossacklabs/themis/ISessionCallbacks;" />
+        <exception name="IOException" type="java.io.IOException" />
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="SecureSession" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureSession;">
+      <constructor deprecated="not deprecated" final="false" name="SecureSession" jni-signature="([BLcom/cossacklabs/themis/PrivateKey;Lcom/cossacklabs/themis/ISessionCallbacks;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureSession" synthetic="false" visibility="public">
+        <parameter name="id" type="byte[]" jni-type="[B" />
+        <parameter name="signPrivateKey" type="com.cossacklabs.themis.PrivateKey" jni-type="Lcom/cossacklabs/themis/PrivateKey;" />
+        <parameter name="callbacks" type="com.cossacklabs.themis.ISessionCallbacks" jni-type="Lcom/cossacklabs/themis/ISessionCallbacks;" />
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="SecureSession" jni-signature="(Ljava/lang/String;Lcom/cossacklabs/themis/PrivateKey;Lcom/cossacklabs/themis/ISessionCallbacks;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureSession" synthetic="false" visibility="public">
+        <parameter name="id" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="signPrivateKey" type="com.cossacklabs.themis.PrivateKey" jni-type="Lcom/cossacklabs/themis/PrivateKey;" />
+        <parameter name="callbacks" type="com.cossacklabs.themis.ISessionCallbacks" jni-type="Lcom/cossacklabs/themis/ISessionCallbacks;" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="close" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="generateConnectRequest" jni-signature="()[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="true" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getState" jni-signature="()Lcom/cossacklabs/themis/SecureSession$State;" bridge="false" native="false" return="com.cossacklabs.themis.SecureSession.State" jni-return="Lcom/cossacklabs/themis/SecureSession$State;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="isEstablished" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="true" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="deprecated" final="false" name="restore" jni-signature="([BLcom/cossacklabs/themis/ISessionCallbacks;)Lcom/cossacklabs/themis/SecureSession;" bridge="false" native="false" return="com.cossacklabs.themis.SecureSession" jni-return="Lcom/cossacklabs/themis/SecureSession;" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="state" type="byte[]" jni-type="[B" />
+        <parameter name="callbacks" type="com.cossacklabs.themis.ISessionCallbacks" jni-type="Lcom/cossacklabs/themis/ISessionCallbacks;" />
+        <exception name="SecureSessionException" type="com.cossacklabs.themis.SecureSessionException" />
+      </method>
+      <method abstract="false" deprecated="deprecated" final="false" name="save" jni-signature="()[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="true" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="unwrap" jni-signature="([B)Lcom/cossacklabs/themis/SecureSession$UnwrapResult;" bridge="false" native="false" return="com.cossacklabs.themis.SecureSession.UnwrapResult" jni-return="Lcom/cossacklabs/themis/SecureSession$UnwrapResult;" static="false" synchronized="true" synthetic="false" visibility="public">
+        <parameter name="wrappedData" type="byte[]" jni-type="[B" />
+        <exception name="SecureSessionException" type="com.cossacklabs.themis.SecureSessionException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="wrap" jni-signature="([B)[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="true" synthetic="false" visibility="public">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <exception name="SecureSessionException" type="com.cossacklabs.themis.SecureSessionException" />
+      </method>
+      <field deprecated="not deprecated" final="false" name="callbacks" jni-signature="Lcom/cossacklabs/themis/ISessionCallbacks;" static="false" transient="false" type="com.cossacklabs.themis.ISessionCallbacks" type-generic-aware="com.cossacklabs.themis.ISessionCallbacks" visibility="protected" volatile="false" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="SecureSession.1" static="true" visibility="" jni-signature="Lcom/cossacklabs/themis/SecureSession$1;" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.cossacklabs.themis.SecureSession.SessionDataType&gt;" jni-extends="Ljava/lang/Enum;" final="true" name="SecureSession.SessionDataType" static="true" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureSession$SessionDataType;">
+      <method abstract="false" deprecated="not deprecated" final="false" name="fromByte" jni-signature="(B)Lcom/cossacklabs/themis/SecureSession$SessionDataType;" bridge="false" native="false" return="com.cossacklabs.themis.SecureSession.SessionDataType" jni-return="Lcom/cossacklabs/themis/SecureSession$SessionDataType;" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="src" type="byte" jni-type="B" />
+        <exception name="SecureSessionException" type="com.cossacklabs.themis.SecureSessionException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="valueOf" jni-signature="(Ljava/lang/String;)Lcom/cossacklabs/themis/SecureSession$SessionDataType;" bridge="false" native="false" return="com.cossacklabs.themis.SecureSession.SessionDataType" jni-return="Lcom/cossacklabs/themis/SecureSession$SessionDataType;" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="name" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="values" jni-signature="()[Lcom/cossacklabs/themis/SecureSession$SessionDataType;" bridge="false" native="false" return="com.cossacklabs.themis.SecureSession.SessionDataType[]" jni-return="[Lcom/cossacklabs/themis/SecureSession$SessionDataType;" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <field deprecated="not deprecated" final="true" name="NO_DATA" jni-signature="Lcom/cossacklabs/themis/SecureSession$SessionDataType;" static="true" transient="false" type="com.cossacklabs.themis.SecureSession.SessionDataType" type-generic-aware="com.cossacklabs.themis.SecureSession.SessionDataType" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PROTOCOL_DATA" jni-signature="Lcom/cossacklabs/themis/SecureSession$SessionDataType;" static="true" transient="false" type="com.cossacklabs.themis.SecureSession.SessionDataType" type-generic-aware="com.cossacklabs.themis.SecureSession.SessionDataType" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="USER_DATA" jni-signature="Lcom/cossacklabs/themis/SecureSession$SessionDataType;" static="true" transient="false" type="com.cossacklabs.themis.SecureSession.SessionDataType" type-generic-aware="com.cossacklabs.themis.SecureSession.SessionDataType" visibility="public" volatile="false" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.cossacklabs.themis.SecureSession.State&gt;" jni-extends="Ljava/lang/Enum;" final="true" name="SecureSession.State" static="true" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureSession$State;">
+      <method abstract="false" deprecated="not deprecated" final="false" name="valueOf" jni-signature="(Ljava/lang/String;)Lcom/cossacklabs/themis/SecureSession$State;" bridge="false" native="false" return="com.cossacklabs.themis.SecureSession.State" jni-return="Lcom/cossacklabs/themis/SecureSession$State;" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="name" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="values" jni-signature="()[Lcom/cossacklabs/themis/SecureSession$State;" bridge="false" native="false" return="com.cossacklabs.themis.SecureSession.State[]" jni-return="[Lcom/cossacklabs/themis/SecureSession$State;" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <field deprecated="not deprecated" final="true" name="ESTABLISHED" jni-signature="Lcom/cossacklabs/themis/SecureSession$State;" static="true" transient="false" type="com.cossacklabs.themis.SecureSession.State" type-generic-aware="com.cossacklabs.themis.SecureSession.State" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="IDLE" jni-signature="Lcom/cossacklabs/themis/SecureSession$State;" static="true" transient="false" type="com.cossacklabs.themis.SecureSession.State" type-generic-aware="com.cossacklabs.themis.SecureSession.State" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="NEGOTIATING" jni-signature="Lcom/cossacklabs/themis/SecureSession$State;" static="true" transient="false" type="com.cossacklabs.themis.SecureSession.State" type-generic-aware="com.cossacklabs.themis.SecureSession.State" visibility="public" volatile="false" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="SecureSession.UnwrapResult" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureSession$UnwrapResult;">
+      <method abstract="false" deprecated="not deprecated" final="false" name="getData" jni-signature="()[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDataType" jni-signature="()Lcom/cossacklabs/themis/SecureSession$SessionDataType;" bridge="false" native="false" return="com.cossacklabs.themis.SecureSession.SessionDataType" jni-return="Lcom/cossacklabs/themis/SecureSession$SessionDataType;" static="false" synchronized="false" synthetic="false" visibility="public" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" jni-extends="Ljava/lang/Exception;" final="false" name="SecureSessionException" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureSessionException;">
+      <constructor deprecated="not deprecated" final="false" name="SecureSessionException" jni-signature="()V" bridge="false" static="false" type="com.cossacklabs.themis.SecureSessionException" synthetic="false" visibility="public" />
+      <constructor deprecated="not deprecated" final="false" name="SecureSessionException" jni-signature="(Ljava/lang/String;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureSessionException" synthetic="false" visibility="public">
+        <parameter name="message" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.net.Socket" extends-generic-aware="java.net.Socket" jni-extends="Ljava/net/Socket;" final="false" name="SecureSocket" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureSocket;">
+      <constructor deprecated="not deprecated" final="false" name="SecureSocket" jni-signature="([BLcom/cossacklabs/themis/PrivateKey;Lcom/cossacklabs/themis/ISessionCallbacks;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureSocket" synthetic="false" visibility="public">
+        <parameter name="id" type="byte[]" jni-type="[B" />
+        <parameter name="signPrivateKey" type="com.cossacklabs.themis.PrivateKey" jni-type="Lcom/cossacklabs/themis/PrivateKey;" />
+        <parameter name="callbacks" type="com.cossacklabs.themis.ISessionCallbacks" jni-type="Lcom/cossacklabs/themis/ISessionCallbacks;" />
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="SecureSocket" jni-signature="(Ljava/net/InetAddress;I[BLcom/cossacklabs/themis/PrivateKey;Lcom/cossacklabs/themis/ISessionCallbacks;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureSocket" synthetic="false" visibility="public">
+        <parameter name="dstAddress" type="java.net.InetAddress" jni-type="Ljava/net/InetAddress;" />
+        <parameter name="dstPort" type="int" jni-type="I" />
+        <parameter name="id" type="byte[]" jni-type="[B" />
+        <parameter name="signPrivateKey" type="com.cossacklabs.themis.PrivateKey" jni-type="Lcom/cossacklabs/themis/PrivateKey;" />
+        <parameter name="callbacks" type="com.cossacklabs.themis.ISessionCallbacks" jni-type="Lcom/cossacklabs/themis/ISessionCallbacks;" />
+        <exception name="IOException" type="java.io.IOException" />
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.io.FilterInputStream" extends-generic-aware="java.io.FilterInputStream" jni-extends="Ljava/io/FilterInputStream;" final="false" name="SecureSocket.SecureInputStream" static="false" visibility="private" jni-signature="Lcom/cossacklabs/themis/SecureSocket$SecureInputStream;">
+      <constructor deprecated="not deprecated" final="false" name="SecureSocket.SecureInputStream" jni-signature="(Lcom/cossacklabs/themis/SecureSocket;Ljava/io/InputStream;Lcom/cossacklabs/themis/SecureSession;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureSocket.SecureInputStream" synthetic="false" visibility="protected">
+        <parameter name="in" type="java.io.InputStream" jni-type="Ljava/io/InputStream;" />
+        <parameter name="session" type="com.cossacklabs.themis.SecureSession" jni-type="Lcom/cossacklabs/themis/SecureSession;" />
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.io.FilterOutputStream" extends-generic-aware="java.io.FilterOutputStream" jni-extends="Ljava/io/FilterOutputStream;" final="false" name="SecureSocket.SecureOutputStream" static="false" visibility="private" jni-signature="Lcom/cossacklabs/themis/SecureSocket$SecureOutputStream;">
+      <constructor deprecated="not deprecated" final="false" name="SecureSocket.SecureOutputStream" jni-signature="(Lcom/cossacklabs/themis/SecureSocket;Ljava/io/OutputStream;Lcom/cossacklabs/themis/SecureSession;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureSocket.SecureOutputStream" synthetic="false" visibility="public">
+        <parameter name="out" type="java.io.OutputStream" jni-type="Ljava/io/OutputStream;" />
+        <parameter name="session" type="com.cossacklabs.themis.SecureSession" jni-type="Lcom/cossacklabs/themis/SecureSession;" />
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.cossacklabs.themis.SecureSession" extends-generic-aware="com.cossacklabs.themis.SecureSession" jni-extends="Lcom/cossacklabs/themis/SecureSession;" final="false" name="SecureTransportSession" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SecureTransportSession;">
+      <constructor deprecated="not deprecated" final="false" name="SecureTransportSession" jni-signature="([BLcom/cossacklabs/themis/PrivateKey;Lcom/cossacklabs/themis/ITransportSessionCallbacks;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureTransportSession" synthetic="false" visibility="public">
+        <parameter name="id" type="byte[]" jni-type="[B" />
+        <parameter name="signPrivateKey" type="com.cossacklabs.themis.PrivateKey" jni-type="Lcom/cossacklabs/themis/PrivateKey;" />
+        <parameter name="callbacks" type="com.cossacklabs.themis.ITransportSessionCallbacks" jni-type="Lcom/cossacklabs/themis/ITransportSessionCallbacks;" />
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="SecureTransportSession" jni-signature="(Ljava/lang/String;Lcom/cossacklabs/themis/PrivateKey;Lcom/cossacklabs/themis/ITransportSessionCallbacks;)V" bridge="false" static="false" type="com.cossacklabs.themis.SecureTransportSession" synthetic="false" visibility="public">
+        <parameter name="id" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="signPrivateKey" type="com.cossacklabs.themis.PrivateKey" jni-type="Lcom/cossacklabs/themis/PrivateKey;" />
+        <parameter name="callbacks" type="com.cossacklabs.themis.ITransportSessionCallbacks" jni-type="Lcom/cossacklabs/themis/ITransportSessionCallbacks;" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="connect" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="read" jni-signature="()[B" bridge="false" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="false" visibility="public">
+        <exception name="SecureSessionException" type="com.cossacklabs.themis.SecureSessionException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="write" jni-signature="([B)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="data" type="byte[]" jni-type="[B" />
+        <exception name="SecureSessionException" type="com.cossacklabs.themis.SecureSessionException" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.cossacklabs.themis.KeyBytes" extends-generic-aware="com.cossacklabs.themis.KeyBytes" jni-extends="Lcom/cossacklabs/themis/KeyBytes;" final="false" name="SymmetricKey" static="false" visibility="public" jni-signature="Lcom/cossacklabs/themis/SymmetricKey;">
+      <constructor deprecated="not deprecated" final="false" name="SymmetricKey" jni-signature="()V" bridge="false" static="false" type="com.cossacklabs.themis.SymmetricKey" synthetic="false" visibility="public" />
+      <constructor deprecated="not deprecated" final="false" name="SymmetricKey" jni-signature="([B)V" bridge="false" static="false" type="com.cossacklabs.themis.SymmetricKey" synthetic="false" visibility="public">
+        <parameter name="key" type="byte[]" jni-type="[B" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="toByteArray" jni-signature="()[B" bridge="true" native="false" return="byte[]" jni-return="[B" static="false" synchronized="false" synthetic="true" visibility="public" />
+    </class>
+  </package>
+</api>

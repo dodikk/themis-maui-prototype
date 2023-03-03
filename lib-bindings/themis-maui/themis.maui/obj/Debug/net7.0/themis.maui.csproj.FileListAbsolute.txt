@@ -1,0 +1,12 @@
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/themis.maui/bin/Debug/net7.0/themis.maui.deps.json
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/themis.maui/bin/Debug/net7.0/themis.maui.dll
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/themis.maui/bin/Debug/net7.0/themis.maui.pdb
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/themis.maui/obj/Debug/net7.0/themis.maui.csproj.AssemblyReference.cache
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/themis.maui/obj/Debug/net7.0/themis.maui.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/themis.maui/obj/Debug/net7.0/themis.maui.AssemblyInfoInputs.cache
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/themis.maui/obj/Debug/net7.0/themis.maui.AssemblyInfo.cs
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/themis.maui/obj/Debug/net7.0/themis.maui.csproj.CoreCompileInputs.cache
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/themis.maui/obj/Debug/net7.0/themis.maui.dll
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/themis.maui/obj/Debug/net7.0/refint/themis.maui.dll
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/themis.maui/obj/Debug/net7.0/themis.maui.pdb
+/Users/dodd/projects/work/cps/Mobile.MAUI/lib-bindings/themis-maui/themis.maui/obj/Debug/net7.0/ref/themis.maui.dll
