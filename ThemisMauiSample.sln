@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 17.0.31611.283
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{55C65951-934E-40E1-8A98-88F8B2A84EF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemisMauiSample", "src\app\ThemisMauiSample\ThemisMauiSample.csproj", "{04FACF15-1C0B-435F-BC4E-5252C2000CFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib-bindings", "lib-bindings", "{98FA1B4D-D882-4180-8491-1BE08451C017}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themis.maui", "lib-bindings\themis-maui\themis.maui\themis.maui.csproj", "{924ABE28-3CC6-4279-8863-7EAD2737951E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Themis.Maui.iOS", "lib-bindings\themis-maui\Themis.Maui.iOS\Themis.Maui.iOS.csproj", "{81D2C735-7902-4DF2-BBD8-EC55EC4953F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Themis.Maui.Droid", "lib-bindings\themis-maui\Themis.Maui.Droid\Themis.Maui.Droid.csproj", "{7F77F53B-CDBC-4AB4-9921-6468A998AFB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themis.ios.wrapper.maui", "lib-bindings\themis-maui\themis.ios.wrapper.maui\themis.ios.wrapper.maui.csproj", "{8C6DE6E6-397C-41C9-8F28-74A14E765D0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "themis.droid.wrapper.maui", "lib-bindings\themis-maui\themis.droid.wrapper.maui\themis.droid.wrapper.maui.csproj", "{7551DF01-EF50-4A78-A9D5-9045F153476E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04FACF15-1C0B-435F-BC4E-5252C2000CFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04FACF15-1C0B-435F-BC4E-5252C2000CFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04FACF15-1C0B-435F-BC4E-5252C2000CFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04FACF15-1C0B-435F-BC4E-5252C2000CFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{924ABE28-3CC6-4279-8863-7EAD2737951E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{924ABE28-3CC6-4279-8863-7EAD2737951E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{924ABE28-3CC6-4279-8863-7EAD2737951E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{924ABE28-3CC6-4279-8863-7EAD2737951E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81D2C735-7902-4DF2-BBD8-EC55EC4953F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81D2C735-7902-4DF2-BBD8-EC55EC4953F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81D2C735-7902-4DF2-BBD8-EC55EC4953F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81D2C735-7902-4DF2-BBD8-EC55EC4953F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F77F53B-CDBC-4AB4-9921-6468A998AFB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F77F53B-CDBC-4AB4-9921-6468A998AFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F77F53B-CDBC-4AB4-9921-6468A998AFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F77F53B-CDBC-4AB4-9921-6468A998AFB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C6DE6E6-397C-41C9-8F28-74A14E765D0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C6DE6E6-397C-41C9-8F28-74A14E765D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C6DE6E6-397C-41C9-8F28-74A14E765D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C6DE6E6-397C-41C9-8F28-74A14E765D0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7551DF01-EF50-4A78-A9D5-9045F153476E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7551DF01-EF50-4A78-A9D5-9045F153476E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7551DF01-EF50-4A78-A9D5-9045F153476E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7551DF01-EF50-4A78-A9D5-9045F153476E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04FACF15-1C0B-435F-BC4E-5252C2000CFD} = {55C65951-934E-40E1-8A98-88F8B2A84EF2}
+		{924ABE28-3CC6-4279-8863-7EAD2737951E} = {98FA1B4D-D882-4180-8491-1BE08451C017}
+		{81D2C735-7902-4DF2-BBD8-EC55EC4953F3} = {98FA1B4D-D882-4180-8491-1BE08451C017}
+		{7F77F53B-CDBC-4AB4-9921-6468A998AFB3} = {98FA1B4D-D882-4180-8491-1BE08451C017}
+		{8C6DE6E6-397C-41C9-8F28-74A14E765D0F} = {98FA1B4D-D882-4180-8491-1BE08451C017}
+		{7551DF01-EF50-4A78-A9D5-9045F153476E} = {98FA1B4D-D882-4180-8491-1BE08451C017}
+	EndGlobalSection
+EndGlobal
