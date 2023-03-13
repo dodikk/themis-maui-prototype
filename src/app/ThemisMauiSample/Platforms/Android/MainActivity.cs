@@ -3,6 +3,8 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Com.Cossacklabs.Themis;
+using Themis;
+using Themis.Droid;
 
 namespace ThemisMauiSample;
 
@@ -21,6 +23,10 @@ public class MainActivity : MauiAppCompatActivity
 
     protected override void OnCreate(Bundle savedInstanceState)
     {
+        // for Xamarin.Forms managed code demo in MainPage.xaml.cs
+        // -
+        DependencyService.Register<ICellSealBuilder, CellSealBuilderDroid>();
+
         // Xamarin.Android demo
         // -
         ExecuteThemisNativeSample();
