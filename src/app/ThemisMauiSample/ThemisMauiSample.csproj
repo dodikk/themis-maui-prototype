@@ -71,9 +71,8 @@
 	    <ProjectReference Include="..\..\..\lib-bindings\themis-maui\themis.droid.wrapper.maui\themis.droid.wrapper.maui.csproj" />
 	</ItemGroup>
 
-	<PropertyGroup Condition="$(TargetFramework.Contains('-ios'))">
-        <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
-    </PropertyGroup>
+
+    
 	<PropertyGroup Condition="'$(TargetFramework)' == 'net6.0-maccatalyst'">
 	    <RuntimeIdentifier>maccatalyst-arm64</RuntimeIdentifier>
 	</PropertyGroup>
