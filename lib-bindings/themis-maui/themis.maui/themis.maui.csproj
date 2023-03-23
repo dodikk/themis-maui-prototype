@@ -1,7 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <!--
+        Note: [alex-d] uncomment multiple frameworks to workaround the build error below
+        Metadata file '.dll' could not be found
+    
+        <TargetFrameworks>net7.0;net7.0-android;net7.0-ios</TargetFrameworks>
+    -->
     <TargetFramework>net7.0</TargetFramework>
+    
+    
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
